@@ -8,7 +8,7 @@ class BusinessLogic
   public:
     BusinessLogic(rclcpp::Logger logger);   // Is there any other ways to log without using ros logger ?
     bool myServiceLogic();
-    void mySubscriptionLogic();
+    int mySubscriptionLogic(int msg_data);
 
   private:
     rclcpp::Logger logger_;

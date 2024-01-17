@@ -18,7 +18,7 @@ void ROS2Interface::mySubscription(const std_msgs::msg::Bool & msg)
     msg.data;
 
     // call business logic
-    bl_.mySubscriptionLogic();
+    bl_.mySubscriptionLogic(msg.data);
     RCLCPP_INFO_STREAM(get_logger(), "mySubscription callback is ended !");
 }
 

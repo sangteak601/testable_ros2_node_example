@@ -30,4 +30,11 @@ install(TARGETS
   my_node
   DESTINATION lib/${PROJECT_NAME})
 
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+
+  ament_add_gtest(unit_test test/unit_test.cpp src/business_logic.cpp)
+  ament_target_dependencies(unit_test ${THIS_PACKAGE_INCLUDE_DEPENDS})
+endif()
+
 ament_package()

@@ -18,9 +18,10 @@ bool BusinessLogic::myServiceLogic()
     return true;
 }
 
-void BusinessLogic::mySubscriptionLogic()
+int BusinessLogic::mySubscriptionLogic(int msg_data)
 {
     RCLCPP_INFO_STREAM(logger_, "mySubscriptionLogic is called ! ");
     // do something
     RCLCPP_INFO_STREAM(logger_, "mySubscriptionLogic is ended ! ");
+    return msg_data;
 }
